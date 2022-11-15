@@ -1,3 +1,5 @@
+require 'pry'
+
 class ItemController < ApplicationController
     get '/items' do 
         list = Item.all
@@ -24,4 +26,21 @@ class ItemController < ApplicationController
         item = Item.find(params[:id]).destroy
         item.to_json
     end
+
+    get '/items/price_ascending' do
+        items = Item.price_ascending
+        items.to_json
+    end
+
+    get '/items/price_descending' do
+        items = Item.price_descending
+        items.to_json
+    end
+
+    get '/items/:category' do
+        items = Item.all.where(category: params[:category])
+        items.to_json
+    end
+
+  
 end
