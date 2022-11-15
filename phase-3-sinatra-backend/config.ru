@@ -13,3 +13,7 @@ use Rack::JSONBodyParser
 
 # Our application
 run ApplicationController
+
+use ItemController
+use ShoppeController
+use InteractionController
