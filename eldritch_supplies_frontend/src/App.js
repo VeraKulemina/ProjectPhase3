@@ -9,15 +9,11 @@ import ItemDetail from "./components/ItemDetail"
 import Shoppes from "./components/Shoppes"
 
 function App() {
-
-
   return (
     <div className="App">
-     
-      
       <Routes>
         <Route path="/" element={<Home></Home>}/>
-        <Route path="inventory" element={<Inventory></Inventory>}/>
+        <Route path="inventory" element={<Inventory/>}/>
         {/* <Route path="inventory/:id" >
         </Route> */}
         <Route path="shoppes" element={<Shoppes></Shoppes>}/>

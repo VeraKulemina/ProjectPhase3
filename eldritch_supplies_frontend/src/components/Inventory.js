@@ -5,19 +5,22 @@ import ItemCard from "./ItemCard"
 
 const Inventory = () => {
 
-    const [items, setItems] = useState([])
+    const [items, setItems] = useState([]);
+
     
     useEffect(() => {
         fetch("http://localhost:9292/items")
-        .then(res => res.to_json)
+        .then(res => res.json)
         .then(data => setItems(data))
     }, []);
-
    
-
-    const itemCards = items.map((item) => (
-        <ItemCard key={item.id} item={item}/>
-    ))
+    
+    let itemCards = () => {
+        (items.length > 0) ? itemCards = items.map((i) => (<ItemCard key={i.id} item={i}/>)) :  <div></div>
+    } 
+    
+    console.log(items)
+   
 
 
     return (
