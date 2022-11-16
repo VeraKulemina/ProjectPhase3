@@ -18,9 +18,9 @@ const Inventory = () => {
         return ((items.length > 0) ? items.map((i) => (<ItemCard key={i.id} item={i}/>)) : <div></div>)
     }  
 
-    console.log(items)
-
     console.log(itemCards) 
+    console.log(items)
+    
    
 
 
