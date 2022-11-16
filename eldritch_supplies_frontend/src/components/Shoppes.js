@@ -3,10 +3,7 @@ import NavbarMain from "./NavbarMain";
 import ShoppeCard from "./ShoppeCards";
 
 const Shoppes = () => {
-    
-
     const [shoppes, setShoppes] = useState([]);
-
     
     useEffect(() => {
         fetch("http://localhost:9292/shoppes")
@@ -18,7 +15,6 @@ const Shoppes = () => {
         return ((shoppes.length > 0) ? shoppes.map((i) => (<ShoppeCard key={i.id} shoppe={i}/>)) : <div></div>)
     }  
 
-    
     return ( 
     <>
         <NavbarMain/>

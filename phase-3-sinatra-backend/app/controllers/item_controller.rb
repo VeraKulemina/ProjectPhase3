@@ -16,6 +16,12 @@ class ItemController < ApplicationController
         )
         item.to_json
     end
+
+    get '/items/:id' do
+        item = Item.find(params[:id])
+        item.to_json
+    end
+
     
     patch '/items/:id' do
         item = Item.find(params[:id]).update(price: params[:price])
