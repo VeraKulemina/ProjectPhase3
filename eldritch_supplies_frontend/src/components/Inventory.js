@@ -14,9 +14,6 @@ const Inventory = () => {
         .then(data => setItems(data))
     }, []);
    
-    
-    
-    
     const itemCards = () => {
         return ((items.length > 0) ? items.map((i) => (<ItemCard key={i.id} item={i}/>)) : <div></div>)
     }  
