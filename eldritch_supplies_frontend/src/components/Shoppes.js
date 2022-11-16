@@ -1,7 +1,10 @@
 import React from "react";
+import NavbarMain from "./NavbarMain";
 
-const Shoppe = () => {
-    return <div></div>
+const Shoppes = () => {
+    return <div>
+        <NavbarMain/>
+    </div>
 }
 
-export default Shoppe;
+export default Shoppes;
