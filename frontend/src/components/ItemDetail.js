@@ -1,14 +1,13 @@
 import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom"
+import {useParams} from "react-router-dom";
+import {UseContext} from "react";
+import { UserProvider } from "../context/user";
 
 const ItemDetails = () => {
 
     const [item, setItem] = useState()
     const {id} = useParams();
-
-    console.log("The id is: ")
-    console.log(id)
-
+    
     useEffect(() => {
         fetch(`http://localhost:9292/items/${id}`)
             .then(r => r.json())
@@ -21,7 +20,7 @@ const ItemDetails = () => {
                 <div class="lg:w-4/5 mx-auto flex flex-wrap">
                 <img alt={item.name} class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200" src={item.img_url}/>
                 <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                    <h2 class="text-sm title-font text-gray-500 tracking-widest">BRAND NAME</h2>
+                    <h2 class="text-sm title-font text-gray-500 tracking-widest">{item.category.toUpperCase()}</h2>
                     <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{item.name}</h1>
                     <div class="flex mb-4">
                     <span class="flex items-center">
@@ -60,7 +59,7 @@ const ItemDetails = () => {
                         </a>
                     </span>
                     </div>
-                    <p class="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
+                    <p class="leading-relaxed">{item.description}</p>
                     <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
                     <div class="flex">
                         <span class="mr-3">Color</span>
