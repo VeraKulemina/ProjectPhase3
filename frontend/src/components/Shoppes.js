@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import NavbarMain from "./NavbarMain";
-import ShoppeCard from "./ShoppeCards";
+import ShoppeCard from "./ShoppeCard";
 
 const Shoppes = () => {
     const [shoppes, setShoppes] = useState([]);

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_14_214632) do
+ActiveRecord::Schema.define(version: 2022_11_17_043630) do
 
   create_table "interactions", force: :cascade do |t|
     t.integer "shoppe_id"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2022_11_14_214632) do
     t.string "name"
     t.string "address"
     t.string "img_url"
+    t.string "password"
   end
 
 end

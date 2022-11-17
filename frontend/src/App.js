@@ -7,6 +7,7 @@ import NavbarMain from './components/NavbarMain';
 import Inventory from "./components/Inventory"
 import ItemDetail from "./components/ItemDetail"
 import Shoppes from "./components/Shoppes"
+import ShoppeDetail from "./components/ShoppeDetail"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="inventory" element={<Inventory/>}/>
         <Route path="inventory/:id" element={<ItemDetail/>}/>
         <Route path="shoppes" element={<Shoppes></Shoppes>}/>
+        <Route path="shoppes/:id" element={<ShoppeDetail/>}/>
       </Routes>
     </div>
   );
