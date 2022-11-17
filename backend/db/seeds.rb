@@ -1,12 +1,14 @@
 
 puts "🌱 Seeding spices..."
 
-Shoppe.create(name: "Thorn and Moon", address: "123 Fake Street")
-Shoppe.create(name: "Thorn and Spoon", address: "122 Fakely Avenue")
-Shoppe.create(name: "Thorn and Soon", address: "126 Fakester Blvd")
-Shoppe.create(name: "Thorn and June", address: "126 Fakingham Place")
+Shoppe.create(name: "The Web of Magick", address: "4201 Avalon Avenue", password:"pass", img_url:"http://www.webofmagick.co.uk/shopic.jpg")
+Shoppe.create(name: "The Astrology Shoppe", address:"666 Scary Avenue", password:"pass", img_url: "https://assets.londonist.com/uploads/2018/10/i875/astrology_shop.jpg")
+Shoppe.create(name: "Thorn and Moon", address: "123 Fake Street", password:"pass", img_url: "https://assets.londonist.com/uploads/2018/10/i875/astrology_shop.jpg")
+Shoppe.create(name: "Thorn and Spoon", address: "122 Fakely Avenue", password:"pass", img_url: "https://i.pinimg.com/originals/cd/8e/e7/cd8ee7e4f4f288b1875c10a602f62aa7.jpg")
+Shoppe.create(name: "Thorn and Soon", address: "126 Fakester Blvd", password:"pass", img_url: "https://images.squarespace-cdn.com/content/v1/5b5e3df236099b2ab0787a73/1540254176664-H03K2HUANLKGHZLX8VLG/esoterica.jpg")
+Shoppe.create(name: "Thorn and June", address: "126 Fakingham Place", password:"pass", img_url: "https://fastly.4sqi.net/img/general/600x600/300884_p65IDk1eP4jm4kbPgiu1EdPikX9JQDUjEwqMKmkCzyU.jpg")
 
-Item.create(name: "Cauldron", description:"Double, double toil and trouble; Fire burn and caldron bubble.", category: "Witchcraft", price: 64.99, img_url: "")
+Item.create(name: "Cauldron", description:"Double, double toil and trouble; Fire burn and caldron bubble.", category: "Witchcraft", price: 64.99, img_url: "https://chairish-prod.freetls.fastly.net/image/product/master/1bfde5a4-5115-4f66-b3c5-774b2960240f/antique-cast-iron-cauldron-urn-planter-or-pot-9332")
 Item.create(name: "Grim Grimoire", description:"A very forbidden book.", category: "Witchcraft", price: 26.50, img_url: "https://i.etsystatic.com/14966474/r/il/270bdd/3522828509/il_794xN.3522828509_hz5x.jpg")
 
 #Vera's famous crystals
