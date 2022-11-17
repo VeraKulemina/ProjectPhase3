@@ -1,17 +1,17 @@
-import React, {UseContext} from "react";
+import React from "react";
 import NavbarHome from "./NavBarHome";
-import { UserProvider } from "../context/user";
 
 const Home = () => {
-
-    const user = useContext(UserContext)
-    console.log(user)
-    
-    console.log(user)
     return (
-    <div>
-        <NavbarHome/>
-    </div>)
+        <div  class="homepage">
+            <NavbarHome/>
+            <div class="headerdiv" >
+                <img class="image" src="https://thornandmoonmagickalmarket.files.wordpress.com/2018/09/cropped-thornandmoon_logo_white.png?w=830"/>
+                <h1 className="header">CAULDRON & ROSE</h1>
+                <p className="header">handmade, witchcrafted occult and pagan supplies</p>
+            </div>
+        </ div>
+    )
 }
 
 export default Home;
