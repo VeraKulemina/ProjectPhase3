@@ -6,7 +6,7 @@ Shoppe.create(name: "Thorn and Spoon", address: "122 Fakely Avenue")
 Shoppe.create(name: "Thorn and Soon", address: "126 Fakester Blvd")
 Shoppe.create(name: "Thorn and June", address: "126 Fakingham Place")
 
-Item.create(name: "Cauldron", description:"Double, double toil and trouble; Fire burn and caldron bubble.", category: "Witchcraft", price: 64.99, img_url: "")
+Item.create(name: "Cauldron", description:"Double, double toil and trouble; Fire burn and caldron bubble.", category: "Witchcraft", price: 64.99, img_url: "https://chairish-prod.freetls.fastly.net/image/product/master/1bfde5a4-5115-4f66-b3c5-774b2960240f/antique-cast-iron-cauldron-urn-planter-or-pot-9332")
 Item.create(name: "Grim Grimoire", description:"A very forbidden book.", category: "Witchcraft", price: 26.50, img_url: "https://i.etsystatic.com/14966474/r/il/270bdd/3522828509/il_794xN.3522828509_hz5x.jpg")
 
 #Vera's famous crystals
