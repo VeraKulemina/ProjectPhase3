@@ -10,24 +10,27 @@ const Inventory = () => {
     
     useEffect(() => {
         fetch("http://localhost:9292/items")
-        .then(res => res.json)
+        .then(res => res.json())
         .then(data => setItems(data))
     }, []);
    
-    
-    let itemCards = () => {
-        (items.length > 0) ? itemCards = items.map((i) => (<ItemCard key={i.id} item={i}/>)) :  <div></div>
-    } 
-    
+    const itemCards = () => {
+        return ((items.length > 0) ? items.map((i) => (<ItemCard key={i.id} item={i}/>)) : <div></div>)
+    }  
+
     console.log(items)
+
+    console.log(itemCards) 
    
 
 
     return (
-    <div>
+        <>
         <NavbarMain/>
-        {itemCards}
-    </div>
+        <div class="grid grid-flow-row grid-cols-4 gap-x-4 gap-y-4 bg-indigo-50">
+            {itemCards()}
+        </div>
+        </>
     )
 }
 
