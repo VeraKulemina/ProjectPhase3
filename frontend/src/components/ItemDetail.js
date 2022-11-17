@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
-import {UseContext} from "react";
-import { UserProvider } from "../context/user";
 
 const ItemDetails = () => {
 
