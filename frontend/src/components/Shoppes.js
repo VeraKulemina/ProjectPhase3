@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import NavbarMain from "./NavbarMain";
 import ShoppeCard from "./ShoppeCard";
+import {UseContext} from "react";
+import { UserProvider } from "../context/user";
 
 const Shoppes = () => {
     const [shoppes, setShoppes] = useState([]);
@@ -14,6 +16,8 @@ const Shoppes = () => {
     const shoppeCards = () => {
         return ((shoppes.length > 0) ? shoppes.map((i) => (<ShoppeCard key={i.id} shoppe={i}/>)) : <div></div>)
     }  
+
+    console.log(UserContext)
 
     return ( 
     <>
