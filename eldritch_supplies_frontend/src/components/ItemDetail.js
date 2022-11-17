@@ -5,10 +5,7 @@ const ItemDetails = () => {
 
     const [item, setItem] = useState()
     const {id} = useParams();
-
-    console.log("The id is: ")
-    console.log(id)
-
+    
     useEffect(() => {
         fetch(`http://localhost:9292/items/${id}`)
             .then(r => r.json())
