@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, {useState} from 'react';
 import {Routes, Route} from "react-router-dom"
 import './App.css';
 
@@ -9,21 +9,15 @@ import ItemDetail from "./components/ItemDetail"
 import Shoppes from "./components/Shoppes"
 import ShoppeDetail from "./components/ShoppeDetail"
 
+import {UserProvider} from "./context/context"
+
 function App() {
-
-  const UserContext = React.createContext();
-
-  function UserProvider({ children }) {
-    // the value prop of the provider will be our context data
-    // this value will be available to child components of this provider
-    return <UserContext.Provider value={null}>{children}</UserContext.Provider>;
-  }
 
   return (
     <UserProvider>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home></Home>}/>
+          <Route path="/" element={<Home></Home>} class="homepage"/>
           <Route path="inventory" element={<Inventory/>}/>
           <Route path="inventory/:id" element={<ItemDetail/>}/>
           <Route path="shoppes" element={<Shoppes></Shoppes>}/>

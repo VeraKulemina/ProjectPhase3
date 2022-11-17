@@ -4,12 +4,16 @@ import {NavLink} from "react-router-dom";
 
 const NavbarMain = () => {
     return (
-
     <div className="navbar">
-        <br></br>
-        <NavLink to="/inventory">Inventory</NavLink>
-        <NavLink to="/shoppes">Shoppes/Users</NavLink>
-        <br></br>
+        <div className="navgrid">
+            <p><NavLink to="/inventory">Inventory</NavLink></p>
+            <p><NavLink to="/shoppes">Shoppes/Users</NavLink></p>
+            <div className="categories">
+            <div class="grid grid-cols-4 gap-x-2 bg-black w-full h-full">
+            </div>
+            </div>
+        
+        </div>
     </div>)
 }
 

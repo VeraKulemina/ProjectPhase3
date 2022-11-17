@@ -24,13 +24,18 @@ class ItemController < ApplicationController
 
     
     patch '/items/:id' do
-        item = Item.find(params[:id]).update(price: params[:price])
+        item = Item.find(params[:id]).update(price: params[:price], count: params[:count])
         item.to_json
     end
 
     delete '/items/:id' do
         item = Item.find(params[:id]).destroy
         item.to_json
+    end
+
+    get "/items/:id/interactions" do 
+        interactions = Item.find(params[:id]).interactions
+        interactions.to_json
     end
 
     get '/items/price_ascending' do
