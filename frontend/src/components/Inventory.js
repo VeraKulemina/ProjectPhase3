@@ -14,9 +14,6 @@ const Inventory = () => {
 
     const currentUser = useContext(UserContext)
 
-    console.log(currentUser)
-    
-
     useEffect(() => {
         fetch("http://localhost:9292/items")
         .then(res => res.json())
@@ -38,7 +35,7 @@ const Inventory = () => {
                 New Form
             </button>
             <Search/>
-            {!isOpen ? null : <NewItemForm/>}
+            {!isOpen ? null : <NewItemForm setIsOpen={setIsOpen} items={items} setItems={setItems}/>}
             {/* <Button onClick={toggleForm}/> */}
             <div class="grid grid-flow-row grid-cols-4 gap-x-4 gap-y-4 bg-indigo-50">
                 {itemCards()}
