@@ -93,7 +93,7 @@ function NewShoppeForm({setIsOpen, shoppes, setShoppes }) {
                             </label>
                             <input
                             onChange={handleInfoChange}
-                            value={formData.meaning_rev}
+                            value={formData.img_url}
                             type="text"
                             name="subject"
                             id="img_url"

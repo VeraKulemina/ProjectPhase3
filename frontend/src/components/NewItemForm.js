@@ -45,7 +45,7 @@ function NewItemForm({setIsOpen, items, setItems}) {
 
   return (
     <div class= "grid place-items-center">
-    <div class="fixed inset-y-12 bg-white w-2/5-h-3/4  z-20">
+    <div class="fixed inset-y-12 bg-white w-2/5-h-3/4 overflow-y-scroll z-20">
             <div class="flex items-center justify-center p-12">
             <div class="mx-auto w-full max-w-[550px]">
                 <p class="mb-4 block text-lg underline font-medium text-[#07074D]">Create an Item:</p>
@@ -100,7 +100,7 @@ function NewItemForm({setIsOpen, items, setItems}) {
                         </label>
                         <input
                         onChange={handleInfoChange}
-                        value={formData.meaning_rev}
+                        value={formData.img_url}
                         type="text"
                         name="subject"
                         id="img_url"

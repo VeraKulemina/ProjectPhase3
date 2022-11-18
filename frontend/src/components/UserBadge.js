@@ -8,7 +8,6 @@ const UserBadge = () => {
     const currentUser = useContext(UserContext)[0]
 
     const navigate = useNavigate()
-    console.log(currentUser)
 
     const directToDetails = () => {
        navigate(`/shoppes/${currentUser.id}`);

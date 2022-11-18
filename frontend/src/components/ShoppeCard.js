@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useContext, useEffect, useState }  from "react";
+import { UserContext, setUser } from "../context/context";
 import {Link} from "react-router-dom";
 import ShoppeDetail from "./ShoppeDetail";
 
 const ShoppeCard = ({shoppe}) => {
+
+    const currentUser = useContext(UserContext)[0]
+    const setCurrent = useContext(UserContext)[1]
+
+    const switchUser = () => {
+        console.log(currentUser)
+        console.log(shoppe)
+        setCurrent(shoppe)
+    }
+
     return ( 
     <div class="w-full max-w-sm mx-9 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
         <div class="flex justify-end px-4 pt-4">
@@ -25,7 +36,7 @@ const ShoppeCard = ({shoppe}) => {
             </div>
         </div>
         <div class="flex flex-col items-center pb-10">
-            <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src={shoppe.img_url} alt="Bonnie image"/>
+            <img onClick={switchUser} class="w-24 h-24 mb-3 rounded-full shadow-lg" src={shoppe.img_url} alt="Bonnie image"/>
             <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{shoppe.name}</h5>
             <span class="text-sm text-gray-500 dark:text-gray-400">{shoppe.address}</span>
             <div class="flex mt-4 space-x-3 md:mt-6">

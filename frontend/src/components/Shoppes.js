@@ -2,15 +2,16 @@ import React, { useContext, useEffect, useState }  from "react";
 import { UserContext } from "../context/context";
 import NavbarMain from "./NavbarMain";
 import ShoppeCard from "./ShoppeCard";
-import NewShoppeForm from "./NewShoppeForm"
+import NewShoppeForm from "./NewShoppeForm";
+import LogIn from "./LogIn";
 
 const Shoppes = () => {
     const [shoppes, setShoppes] = useState([]);
     const [isOpen, setIsOpen] = useState(false)
     
-    const currentUser = useContext(UserContext)
+    // const {currentUser, setUser} = useContext(UserContext)
     
-    console.log(currentUser)
+    // console.log(currentUser)
 
     useEffect(() => {
         fetch("http://localhost:9292/shoppes")
@@ -31,6 +32,7 @@ const Shoppes = () => {
     <>
         
         <NavbarMain/>
+        {/* <LogIn/> */}
         <button className="button" onClick={toggleForm}>
             Register Shoppe
         </button>
