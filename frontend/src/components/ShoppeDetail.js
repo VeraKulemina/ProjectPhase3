@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import { UserContext } from "../context/context";
 import {useParams} from "react-router-dom"
 
 const ShoppeDetail = () => {
