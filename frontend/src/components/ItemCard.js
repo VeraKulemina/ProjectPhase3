@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext, useEffect, useState }  from "react";
+import { UserContext } from "../context/context";
 import {Link} from "react-router-dom";
 
 const ItemCard = ({item}) => {
 
 
     return (    
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <div class="max-w-sm mx-9 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
                 <img class="inline-flex object-center rounded-t-lg max-h-48" src={item.img_url} alt={item.name} />
             </a>

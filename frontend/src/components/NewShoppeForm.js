@@ -1,17 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState }  from "react";
+import { UserContext } from "../context/context";
 
-function NewShoppeForm({ onAddActivity }) {
+function NewShoppeForm() {
+    const [formData, setFormData] = useState({
+      name: "",
+      address: "",
+    });
     
-    fetch("http://localhost:9292/shoppes", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newActivity),
-    })
-      .then((r) => r.json())
-      .then(onAddActivity);
-  }
+
+    // fetch("http://localhost:9292/shoppes", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(newActivity),
+    // })
+    //   .then((r) => r.json())
+    //   .then(onAddActivity);
 
   return (
     <div class=" bg-white w-2/5-h-3/4 fixed left-15 z-20">

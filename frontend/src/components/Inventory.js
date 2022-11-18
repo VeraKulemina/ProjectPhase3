@@ -3,6 +3,7 @@ import { UserContext } from "../context/context";
 import NavbarMain from "./NavbarMain";
 import ItemCard from "./ItemCard";
 import NewItemForm from "./NewItemForm";
+import Search from "./Search"
 
 
 
@@ -36,6 +37,7 @@ const Inventory = () => {
             <button className="button" onClick={toggleForm}>
                 New Form
             </button>
+            <Search/>
             {!isOpen ? null : <NewItemForm/>}
             {/* <Button onClick={toggleForm}/> */}
             <div class="grid grid-flow-row grid-cols-4 gap-x-4 gap-y-4 bg-indigo-50">

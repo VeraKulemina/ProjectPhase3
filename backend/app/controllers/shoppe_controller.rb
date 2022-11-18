@@ -14,6 +14,11 @@ class ShoppeController < ApplicationController
       shoppe.to_json
   end
 
+  get '/shoppes/:id' do
+    shoppe = Shoppe.find(params[:id])
+    shoppe.to_json
+  end
+
   patch '/shoppes/:id' do
       shoppe = Shoppe.find(params[:id]).update(name: params[:name], address: params[:address], password: params[:password])
       shoppe.to_json
