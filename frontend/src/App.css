@@ -144,6 +144,10 @@
   padding: 10px;
   margin: 10px;
   top: 250px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header {
@@ -182,4 +186,8 @@
 #home2:hover {
   background-color: #ddd;
   color: black;
+}
+
+h1{
+  font-size: 40px;
 }

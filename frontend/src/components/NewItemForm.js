@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form } from "semantic-ui-react";
+// import { Form } from "semantic-ui-react";
 
 function NewItemForm({ onAddItem }) {
     const [formData, setFormData] = useState({
@@ -42,7 +42,7 @@ function NewItemForm({ onAddItem }) {
   return (
     <div>
       <h3 className="NewForm">NewForm</h3>
-      <Form onSubmit={handleSubmit} className="buttonS">
+      {/* <Form onSubmit={handleSubmit} className="buttonS">
         <Form.Group widths="equal">
           <Form.Input
             fluid
@@ -91,7 +91,7 @@ function NewItemForm({ onAddItem }) {
           />
         </Form.Group>
         <Form.Button>Submit</Form.Button>
-      </Form>
+      </Form> */}
     </div>
   );
 }

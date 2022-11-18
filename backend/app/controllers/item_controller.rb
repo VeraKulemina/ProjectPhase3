@@ -38,6 +38,7 @@ class ItemController < ApplicationController
         interactions.to_json
     end
 
+
     get '/items/price_ascending' do
         items = Item.price_ascending
         items.to_json
