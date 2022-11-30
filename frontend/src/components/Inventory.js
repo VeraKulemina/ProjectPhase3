@@ -3,6 +3,7 @@ import { UserContext } from "../context/context";
 import NavbarMain from "./NavbarMain";
 import ItemCard from "./ItemCard";
 import NewItemForm from "./NewItemForm";
+import Search from "./Search"
 
 
 
@@ -12,9 +13,6 @@ const Inventory = () => {
     const [isOpen, setIsOpen] = useState(false)
 
     const currentUser = useContext(UserContext)
-
-    console.log(currentUser)
-    
 
     useEffect(() => {
         fetch("http://localhost:9292/items")
@@ -36,7 +34,8 @@ const Inventory = () => {
             <button className="button" onClick={toggleForm}>
                 New Form
             </button>
-            {!isOpen ? null : <NewItemForm/>}
+            <Search/>
+            {!isOpen ? null : <NewItemForm setIsOpen={setIsOpen} items={items} setItems={setItems}/>}
             {/* <Button onClick={toggleForm}/> */}
             <div class="grid grid-flow-row grid-cols-4 gap-x-4 gap-y-4 bg-indigo-50">
                 {itemCards()}

@@ -49,8 +49,8 @@ class ItemController < ApplicationController
     end
 
     get '/items/:category' do
-        items = Item.all.where(category: params[:category])
-        items.to_json
+        blue = Item.all.where(category: params[:category])
+        blue.to_json
     end
 
   

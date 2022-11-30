@@ -6,12 +6,16 @@ class ShoppeController < ApplicationController
   post '/shoppes' do
       shoppe = Shoppe.create(
         name: params[:name],
-        category: params[:category],
-        description: params[:description],
-        price: params[:price],
+        address: params[:address],
+        password: params[:password],
         img_url: 'https://cdn.shopify.com/s/files/1/0273/4214/3566/files/bigstock-Beautiful-Selenite-Heart-Miner-310718956_2.jpg?v=1621235125'
       )
       shoppe.to_json
+  end
+
+  get '/shoppes/:id' do
+    shoppe = Shoppe.find(params[:id])
+    shoppe.to_json
   end
 
   patch '/shoppes/:id' do

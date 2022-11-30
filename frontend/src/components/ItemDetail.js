@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from "react";
+import React, { useContext, useEffect, useState }  from "react";
+import { UserContext } from "../context/context";
 import {useParams} from "react-router-dom";
 
 const ItemDetails = () => {
@@ -11,6 +12,13 @@ const ItemDetails = () => {
             .then(r => r.json())
             .then(data => setItem(data))
     }, [])
+
+    //delete fetch will be called by click event later
+    const handleDelete = () => {
+        fetch(`http://localhost:9292/items/${id}`, {method: "DELETE"})
+    }
+    // I want to figure out a redirect to take place after this delete, but may have to return to that as we are low on time. 
+    
     
     return !item ? <p>item doesn't exist</p> : (
             <section class="text-gray-700 body-font overflow-hidden bg-white">

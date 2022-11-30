@@ -29,5 +29,4 @@ class InteractionController < ApplicationController
     interaction.to_json
   end
 
-
 end

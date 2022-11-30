@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useContext, useEffect, useState }  from "react";
 import { UserContext } from "../context/context";
 import {useParams} from "react-router-dom"
 
@@ -12,9 +12,13 @@ const ShoppeDetail = () => {
             .then(r => r.json())
             .then(data => setShoppe(data))
     }, [])
+
+    const handleDeleteComment = () => {
+        
+    }
+    
     
     return !shoppe ? <p>shoppe doesn't exist</p> : (
-    
     <div></div>
     )
 }
