@@ -10,4 +10,6 @@ class Item < ActiveRecord::Base
     def self.price_descending
         self.all.order(price: :desc)
     end
+
+    
 end

@@ -1,12 +1,18 @@
-import React, {useState, useEffect} from "react";
+import React, { useContext, useEffect, useState }  from "react";
+import { UserContext } from "../context/context";
 import NavbarMain from "./NavbarMain";
 import ShoppeCard from "./ShoppeCard";
-import {UseContext} from "react";
-import { UserProvider } from "../context/user";
+import NewShoppeForm from "./NewShoppeForm";
+import LogIn from "./LogIn";
 
 const Shoppes = () => {
     const [shoppes, setShoppes] = useState([]);
+    const [isOpen, setIsOpen] = useState(false)
     
+    // const {currentUser, setUser} = useContext(UserContext)
+    
+    // console.log(currentUser)
+
     useEffect(() => {
         fetch("http://localhost:9292/shoppes")
         .then(res => res.json())
@@ -17,11 +23,20 @@ const Shoppes = () => {
         return ((shoppes.length > 0) ? shoppes.map((i) => (<ShoppeCard key={i.id} shoppe={i}/>)) : <div></div>)
     }  
 
-    console.log(UserContext)
+    const toggleForm = () => {
+        setIsOpen(() => !isOpen)
+    }
+
 
     return ( 
     <>
+        
         <NavbarMain/>
+        {/* <LogIn/> */}
+        <button className="button" onClick={toggleForm}>
+            Register Shoppe
+        </button>
+        {!isOpen ? null : <NewShoppeForm setIsOpen={setIsOpen} shoppes={shoppes} setShoppes={setShoppes}/>}
         <div class="grid grid-flow-row grid-cols-4 gap-x-4 gap-y-4 bg-indigo-50">
             {shoppeCards()}
         </div>
